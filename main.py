@@ -3,9 +3,18 @@ def main():
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     chars_dict = get_chars_dict(text)
+    letters = []
     print(f"{num_words} words found in this text.")
+    # add each letter to the list of letters occuring in the text
     for c in chars_dict:
-        print(c, chars_dict[c])
+        if c.isalpha():
+            letters.append(c)
+    # sort the letters alphabetically
+    letters.sort()
+    for l in letters:
+        print(f"The '{l}' character was found {chars_dict[l]} times")
+
+
 
 def get_book_text(path):
     with open(path) as f:
