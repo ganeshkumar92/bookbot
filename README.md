@@ -1,2 +1,2 @@
 # bookbot
-My first repo on GitHub
+BookBot is my girst git project!
